@@ -1,0 +1,65 @@
+*{
+    background-color: lightgray;
+}
+.headers{
+    font-size: 50px;
+    color:black;
+    text-align: center;
+}
+
+.navbar{
+font-size: 50px;
+word-spacing: 70mm;
+text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+#home:hover {
+    font-style: italic;
+}
+#menu:hover {
+    font-style: italic;
+}
+#about:hover {
+    font-style: italic;
+}
+
+#img{
+    padding: 200px 100px 100px 50px;
+    float: left;
+    height:500px;
+}
+.blog {
+display: block;
+font-size: 2em;
+padding: 250px;
+}
+
+td, th  {
+border: 1px solid black;
+border-radius: 20px;
+}
+
+table{
+width: 100%;
+text-align: center;
+}
+
+b {
+    font-size: 3rem;
+    color: darkred;
+}
+
+.lists {
+    margin: 5% 0 0 40%;
+    position: relative;
+}
+
+ul{
+    list-style-type: square;
+    font-size: 2rem;
+    color: darkred;
+}
