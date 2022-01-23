@@ -1,0 +1,22 @@
+*{
+    font-size: 30px;
+
+}
+
+input {
+    margin-bottom: 2em;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    color: red;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+button {
+background-color: green;
+}
+
+#result-add, #result-sub, #result-mlt, #result-div {
+    background-color: blue;
+}
