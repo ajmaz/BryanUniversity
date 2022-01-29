@@ -1,0 +1,36 @@
+td {
+    border: 2mm solid white;
+}
+
+#a1{
+    background-color:#F5C6D6;
+    height: 200px;
+}
+
+#a2,#b2, #c2, #d2 {
+    background-color:#EE2E84;
+    height: 200px;
+}
+
+#a3, #b3{
+    background-color: #85CFD8;
+    height: 200px;
+}
+
+#a4{
+    background-color: #8DC63F;
+    height: 200px;
+}
+
+#b4{
+    background-color: #E76E34;
+    height: 200px;
+}
+
+@media only screen and (max-width: 768px){
+td {
+        display: block;
+        width: 100%;
+    }
+}
+
