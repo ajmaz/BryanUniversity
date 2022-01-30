@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="theForm">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname">
+
+        <br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+
+        <br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age">
+
+        <br>
+
+        <p id="shop-question">Return customer?</p>
+
+        <input type="radio"  name="answer" value="YES">
+        <label for="yes">YES</label>
+
+        <br>
+
+        <input type="radio"  name="answer" value="NO">
+        <label for="no">NO</label>
+
+        <br>
+
+        <p id="referral-question">Would you refer us?</p>
+
+        <select name="referral" id = "referral">
+            <option value=""></option>
+            <option value="likely">likely</option>
+            <option value="not likely">Not Likely</option>
+            <option value="very likely">Very likely</option>
+        </select>        
+        
+        <br>
+
+        <p id="favorites">Favorite colors?</p>
+
+        <input type="checkbox" name="color" id="blue" value="Blue">
+        <label for="color">Blue</label>
+
+        <br>
+
+        <input type="checkbox" name="color1" id="green" value="Green">
+        <label for="color1">Green</label>
+
+        <br>
+
+        <input type="checkbox" name="color2" id="red" value="Red">
+        <label for="color2">Red</label>
+
+        <br>
+        <br>
+        <input type="button" id="btn" value="submit">
+
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
