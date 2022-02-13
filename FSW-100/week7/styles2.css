@@ -1,0 +1,59 @@
+:root {
+  --black: rgb(15, 13, 13);
+  --brown: rgb(93, 61, 5);
+  --green:rgb(13, 75, 7);
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: 1px solid grey;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: var(--green);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 3em;
+  }
+
+
+
+
+  @media only screen and (min-width: 1080px){
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+    }
+section {
+    padding: 10em 4em;
+    }
+  }
