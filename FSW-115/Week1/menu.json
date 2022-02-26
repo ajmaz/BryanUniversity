@@ -1,0 +1,114 @@
+{
+    "appetizers": [
+        {
+            "name": "Spinach Artichoke Dip",
+            "ingredients": [
+                "bacon",
+                "artichoke",
+                "garlic-herb flavored cheese spread",
+                "Parmesan cheese",
+                "sour cream"
+            ],
+            "description": "cheesie dip with Artichoke"
+        },
+        {
+            "name": "Chicken strips",
+            "ingredients": [
+                "chicken",
+                "flour"
+            ],
+            "description": "Chicken tender dipped in flour fried in corn oil"
+        }
+    ],
+    "cold sandwiches": [
+        {
+            "name": "cold cut turkey",
+            "ingredients": [
+                "turkey",
+                "bread",
+                "tomatos",
+                "redis",
+                "cheese",
+                "mayo"
+            ],
+            "description": "Cold fresh favorites wrapped in sesame bread, fresh veggies and optional mayo"
+        },
+        {
+            "name": "chicken curry",
+            "ingredients": [
+                "chicken",
+                "curry souce",
+                "bread",
+                "veggies"
+            ],
+            "description": "Chicken curry sandwich, topped with fresh veggies of choice"
+        }
+    ],
+    "hot sandwiches": [
+        {
+            "name": "Chicken terryaki sub",
+            "ingredients": [
+                "chicken breast",
+                "terryaki sauce",
+                "lettuce",
+                "tomatoes",
+                "cheese"
+            ],
+            "description": "chicken submarine sandwich toasted to perfection with a blast of melted cheese and terryaki sauce"
+        },
+        {
+            "name": "Tuna melt",
+            "ingredients": [
+                "Tuna",
+                "Mayo",
+                "cheese",
+                "veggies"
+            ],
+            "description": "Tuna submarine sandwich with cheese toasted to perfection served with favorite veggies "
+        }
+    ],
+    "desserts": [
+        {
+            "name": "apple pie",
+            "ingredients": [
+                "apples",
+                "butter",
+                "egg",
+                "cinnamon",
+                "sugar",
+                "juice"
+            ],
+            "description": "American favorite Apple pie, better than your grandmother makes"
+        },
+        {
+            "name": "cherry pie",
+            "ingredients": [
+                "cherries",
+                "butter",
+                "egg",
+                "cinnamon",
+                "sugar",
+                "juice"
+            ],
+            "description": "Community favorite cherry pie, with a cherry on top"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "soda",
+            "ingredients": [
+                "water",
+                "sugar"
+            ],
+            "description": "sugar water with a label"
+        },
+        {
+            "name": "tea",
+            "ingredients": [
+                "fresh tea",
+                "water"
+            ],
+            "description": "tea - assorted"
+        }
+    ]
+}
