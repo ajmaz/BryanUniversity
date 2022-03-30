@@ -1,4 +1,4 @@
-const movies = [ 
+const movies = [
     { name: 'Avatar', year: 2009, gross: 2847246203 },
     { name: 'Endgame', year: 2019, gross: 2797501328 },
     { name: 'Titanic', year: 1997, gross: 2201647264 },
@@ -11,45 +11,57 @@ const movies = [
     { name: 'Frozen II', year: 2019, gross: 1450026933 }
 ]
 
-const movies2B = movies.filter(function(item) {
-    return item.gross >= 2000000000
+
+var top10Movies = '<ol>'
+movies.forEach((movie) => {
+    top10Movies += `<li>${movie.name} (${movie.year}): $${movie.gross.toLocaleString()}</li>`
+
+});
+
+let newDiv = document.createElement('div')
+newDiv.innerHTML = top10Movies + Date()
+document.body.append(newDiv)
+
+
+const movies2B = movies.filter(function (movie) {
+    return movie.gross >= 2000000000
 })
 
 console.log(movies2B)
 
-const moviesDTL  = movies.forEach(function(movie) {
+const moviesDTL = movies.forEach(function (movie) {
     console.log(movie)
 })
 
 console.log(moviesDTL)
 
-const movieNames = movies.map(function(item) {
+const movieNames = movies.map(function (item) {
     return item.name
 })
 
 console.log(movieNames)
 
-const faveMovie = movies.find(function(item) {
+const faveMovie = movies.find(function (item) {
     return item.name === 'The Lion King'
 })
 
 console.log(faveMovie)
 
-const oldMovies = movies.some(function(item) {
+const oldMovies = movies.some(function (item) {
     return item.year <= 2000
 })
 
 console.log(oldMovies)
 
-const blockBusters = movies.every(function(item) {
+const blockBusters = movies.every(function (item) {
     return item.gross >= 1500000000
 })
 
 console.log(blockBusters)
 
-const totalGross = movies.reduce(function(currentTotal, item) {
-            return item.gross + currentTotal
-    }, 
-0)
-    
+const totalGross = movies.reduce(function (currentTotal, item) {
+    return item.gross + currentTotal
+},
+    0)
+
 console.log(totalGross / movies.length)
