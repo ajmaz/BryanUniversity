@@ -6,16 +6,16 @@
 
 function applyBell(grade, index, ary) {
     switch (true) {
-        case grade >= (mean + (gradeSlice * 2)): 
+        case grade >= (mean + (gradeSlice * 2)):
             ary[index] = 'A'
             break
-        case grade >= (mean + gradeSlice): 
+        case grade >= (mean + gradeSlice):
             ary[index] = 'B'
             break
         case grade >= (mean):
             ary[index] = 'C'
             break
-        case grade >= (mean - gradeSlice): 
+        case grade >= (mean - gradeSlice):
             ary[index] = 'D'
             break
         default:
@@ -38,31 +38,30 @@ function convertArray(obj) {
 // empty lines, can you get the number of lines down to 8?
 
 function curveGrades() {
-    **sum = function (accumulator, currentValue) {
-        return accumulator + currentValue
-    }
+    var sum = (accumulator, currentValue) => accumulator + currentValue
 
-    **sumGrades = function(array) {
-        return array.reduce(sum)
-    }
+    var sumGrades = array => array.reduce(sum);
 
-    **aryGrades = convertArray(document.querySelector('#scores'))
+    aryGrades = convertArray(document.querySelector('#scores'));
 
-    **minGrade = aryGrades.reduce(function(a, b) {
-        return Math.min(a, b)
-    })
-    
-    **maxGrade = aryGrades.reduce(function(a, b) {
-        return Math.max(a, b)
-    })
-    
-    **mean = sumGrades(aryGrades) / aryGrades.length
+    var minGrade = aryGrades.reduce((a, b) =>  Math.min(a, b));
+        
+    var maxGrade = aryGrades.reduce((a, b) => Math.max(a, b));
 
-    **range = maxGrade - minGrade
+    mean = sumGrades(aryGrades) / aryGrades.length;
+
+    let range = maxGrade - minGrade;
 
     gradeSlice = range / 5
 
     aryGrades.forEach(applyBell)
-
     // write the value of aryGrades to the grades div in the HTML document
+    document.querySelector(".gradeDiv").innerHTML = aryGrades
+
 }
+let reset = function () {
+    document.querySelector("input[id='scores']").value = ""
+    document.querySelector(".gradeDiv").innerHTML = "Curved Grades Show Here"
+}
+document.querySelector("#submit").addEventListener("click", curveGrades)
+document.querySelector("#reset").addEventListener("click", reset)
