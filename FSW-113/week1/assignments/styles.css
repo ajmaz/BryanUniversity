@@ -1,0 +1,6 @@
+.letter {
+    margin: 0 auto;
+    width: 400px;
+    border: black 1px solid;
+    padding: 10px;
+}
