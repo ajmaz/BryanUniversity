@@ -53,7 +53,7 @@ parts.forEach((part) => {
 })
 
 if (b3Element != "") {
-    document.querySelector("#specialPackaging").innerHTML += b3Element
+    document.getElementById("specialPackaging").innerHTML += b3Element
 }
 else {
     document.querySelector("#specialPackaging").remove()
