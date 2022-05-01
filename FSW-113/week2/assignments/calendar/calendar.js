@@ -6,7 +6,7 @@
 
 // modify this script to use the first day of the month the user selects in place of the const today 
 
-const today = new Date('10/1/2022')
+const today = new Date()
 const month = today.getMonth()
 let days
 switch (month) {
@@ -15,17 +15,17 @@ switch (month) {
         break
     case 3:
     case 5:
-    case 8: 
+    case 8:
     case 10:
         days = 30
         break
     default:
         days = 31
 }
-    
+
 let x
 const weekday = today.getDay()
-for (x = 0; x < weekday; x++){
+for (x = 0; x < weekday; x++) {
     document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
 }
 
@@ -33,42 +33,84 @@ let dt = 0
 do {
     dt++
     document.getElementById('calendarDays').innerHTML += `<div class='calendarCell'>${dt}</div`
-} while ( dt < days)
+} while (dt < days)
 
-const monthName = today.toLocaleDateString('default', {month:'long'})
+const monthName = today.toLocaleDateString('default', { month: 'long' })
 const year = today.getFullYear()
+
 document.querySelector('.calendarTitle').innerText = `${monthName} ${year}`
 
 const remainder = (7 - ((x + dt) % 7))
 let y = 0
-while ( y < remainder) {
+while (y < remainder) {
     document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
     y++
 }
 
-let printCalendar = (month) => {   
-    let user_month = document.getElementById("months");   
-   
-   today.setFullYear(document.getElementById("year").value, user_month.value, 1)
-    alert(today)
-    
-} 
 
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ] 
 
-let htmlMonth = '<select id="months">' 
+let printCalendar = () => { 
+    let monthOption = document.querySelector("#monthSelect");
+    document.querySelector("#calendarDays").innerHTML = "";
 
-for (let m in months){
-    htmlMonth += '<option value="' + m + '">' + months[m] + '</option>'
-    console.log(m)
+    today.setFullYear(document.getElementById("year").value, monthOption.value, 1)
+
+    const month = today.getMonth()
+    let days
+    switch (month) {
+        case 1:
+            days = 28
+            break
+        case 3:
+        case 5:
+        case 8: 
+        case 10:
+            days = 30
+            break
+        default:
+            days = 31
+    }
+       let x
+       const weekday = today.getDay()
+       for (x = 0; x < weekday; x++){
+           document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
+       }
+       
+       let dt = 0
+       do {
+           dt++
+           document.getElementById('calendarDays').innerHTML += `<div class='calendarCell'>${dt}</div`
+       } while ( dt < days)
+       
+       const monthName = today.toLocaleDateString('default', {month:'long'})
+       const year = today.getFullYear()
+       console.log(monthName)
+       document.querySelector('.calendarTitle').innerText = `${monthName} ${year}`
+       
+       const remainder = (7 - ((x + dt) % 7))
+       let y = 0
+       while ( y < remainder) {
+           document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
+           y++
+       }
 }
 
-htmlMonth += '</select><input type="text" id="year"><button type="button" style="cursor:pointer" onclick=printCalendar()>Go</button>' 
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+for (let i = 0; i < months.length; i++) {
+    let x = document.querySelector("#monthSelect")
+    var option = document.createElement("option")
+    option.innerHTML = months[i]
+    option.value = i
+    x.add(option)
+}
 
 
 
-document.getElementById('selectMonth').innerHTML = htmlMonth;
+var button = document.querySelector(".button")
+button.addEventListener("click", function () {
+    printCalendar()
+})
 
 
 
