@@ -50,8 +50,11 @@ var updateInfo = function(data){
     document.querySelector("#dataValue2").innerHTML = data.crew 
     }
 
-    else {
+   if (itemID == "" || itemID == 0){
         document.querySelector("#dataLabel1").innerHTML = "Please make a selection"
+        document.querySelector("#dataValue1").innerHTML = ""
+        document.querySelector("#dataLabel2").innerHTML = ""
+        document.querySelector("#dataValue2").innerHTML = ""
     }
 }
 
