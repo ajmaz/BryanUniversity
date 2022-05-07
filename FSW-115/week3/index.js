@@ -17,7 +17,7 @@ function showData(data) {
     console.log(data)
     for( i = 0; i< data.length; i++){
     const character = document.createElement("h1")
-    character.textContent = data[i].name
+    character.textContent = data[i].name.charAt(0).toUpperCase()+ data[i].name.substring(1).toLowerCase()
     document.body.appendChild(character)
 }
 }
