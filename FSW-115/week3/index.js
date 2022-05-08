@@ -23,3 +23,25 @@ function showData(data) {
 }
 
 
+// Axios Example
+
+// const getOtherData = () => {
+// console.log(axios)
+
+// axios.get("https://pokeapi.co/api/v2/pokemon")
+// .then(res => {
+//     let cleanData = res.data.results
+//     displayData(cleanData)
+// })
+// .catch(err => console.log(err))
+    
+
+// }
+
+// getOtherData ()
+
+// const displayData = (cleanData) => {
+// cleanData.forEach(e => {
+//     console.log(e)
+// });
+// }
