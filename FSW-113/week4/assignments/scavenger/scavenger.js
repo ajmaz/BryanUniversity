@@ -3,9 +3,23 @@
 // Modify the combineLists() function to create arrays from each scavenger hunt element in the scavenger.html document. 
 // Then use the spread operator to combine these arrays into a single array. 
 // Sort that array and display it in the 'AllItems' element on the scavenger.html document.
+document.getElementById("submit").addEventListener("click", function(){
+        const nodeList = document.querySelectorAll('textarea')
+        const aryResponses = [...nodeList]
+        combineLists(aryResponses)
+    }
+)
 
-function combineLists() {
+function combineLists(arr) {
+    let finalArray = []
+    arr.forEach((item) => {
+        finalArray.push(item.value) 
+        finalArray.sort()
+     })
+document.querySelector('#AllItems').innerHTML = finalArray
+
 }
+
 
 // The following code is a bonus addition that facilitates data entry on the scavenger.html document.
 // If you first click in one of the textareas, you can then click scavenger hunt items in the unordered
