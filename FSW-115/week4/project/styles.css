@@ -1,0 +1,23 @@
+body{
+    color: #fff;
+    margin: 20em;
+    text-align: center;
+    background-color: black;
+}
+
+.button {
+    color: #fff;
+background-color: brown;
+border: .1mm solid;
+border-radius: .5rem;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+ol {
+    list-style-type: none;
+    text-transform: capitalize;
+   }
+
