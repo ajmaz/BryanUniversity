@@ -3,3 +3,39 @@
     to the example as possible. You will need to use display:grid to make the 
     bug reports display in three columns (see week 4).
 */
+body{
+    background-image: url(./images/wallpaper.jpg);
+    margin: .5em;
+    padding: .5em;
+}
+
+
+.reportWrapper{
+
+    padding: .5em;
+    margin: 0 15em auto;
+    border: .2mm solid white;
+    border-radius: .5rem;
+}
+.topbar {
+    border: red;
+    border-radius: .2em;
+    background-color: red;
+    color:#ffff;   
+    margin: 0 0 .2em;
+    
+}
+.topbar img {
+    padding: .2em .2em 0 .2em;
+}
+
+#bttnDiv button{
+    background-color: red;
+    color: #ffff;
+    border: .1mm solid gray;
+}
+
+.listWrapper{
+    border: .2mm solid white;
+    visibility: hidden;
+}
