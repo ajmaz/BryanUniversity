@@ -7,13 +7,14 @@ body{
     background-image: url(./images/wallpaper.jpg);
     margin: .5em;
     padding: .5em;
+    color: #ffff;
 }
 
 
 .reportWrapper{
-
+    margin: auto;
+    width: 20em;
     padding: .5em;
-    margin: 0 15em auto;
     border: .2mm solid white;
     border-radius: .5rem;
 }
@@ -36,6 +37,28 @@ body{
 }
 
 .listWrapper{
+    
     border: .2mm solid white;
-    visibility: hidden;
+    border-radius: .5em;
+    height: 15em;
+
+}
+
+.newBugDiv {
+    display: grid;
+    height: 90%;
+    width: 25%;
+    margin: .5em;
+    border: .1mm solid gray;
+    border-radius: .5em;
+    background-color: gray;
+}
+
+#deleteBtn{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-self:flex-end;
+    height: 10mm;
+    width: 10mm;
+    border-radius: 50%;
 }

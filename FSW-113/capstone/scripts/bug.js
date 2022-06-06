@@ -1,12 +1,36 @@
 // Create a variable of the right kind and in the right place such that each new bug that is added can increment that number
+var reporter = document.querySelector('#reportedBy')
+var system = document.getElementById('system')
+var subSystem = document.getElementById('subSystem')
+var bugDescription = document.getElementById('bugDesc')
+var resetBtn = document.querySelector('#resetBtn')
+var submitBtn = document.querySelector('#submitBtn')
+var listWrapper = document.getElementById('listWrapper')
+
+
 
 class Bug {
-    constructor() {
+    constructor(reporter, system, subSystem, bugDescription) {
         // This constructor should be set up to accept the four user-input values from index.html: 
         // reportedBy, system, subSystem, and bugDesc
+        this.reporter = reporter
+        this.system = system
+        this.subSystem = subSystem
+        this.bugDescription = bugDescription
+
     }
 
-    addBug() {
+
+    addBug(bugReport) {
+        let newbug = document.createElement('div')
+        newbug.className = "newBugDiv"
+        newbug.textContent= bugReport
+        let newBtn = document.createElement('button')
+        newBtn.id= "deleteBtn"
+        newBtn.textContent = "btn"
+        newbug.append(newBtn)
+        listWrapper.appendChild(newbug)
+
         // Create a div element that displays the bug information input by the user within the "listWrapper" DOM element. 
         // It should also contain buttons whose onClick events will call the deleteBug() and resolveBug() methods (see below). 
 
@@ -23,6 +47,16 @@ class Bug {
 }
 
 function reportBug() {
+    let bugReport = new Bug(
+        reporter.value,
+        system.value,
+        subSystem.value,
+        bugDescription.value
+    )
+
+    bugReport.addBug('reported by: ' + bugReport.reporter  )
+
     // Create code that instantiates the Bug class with the data input by the 
     // user in the index.html form. Then call the method to add the new bug report.
+
 }
