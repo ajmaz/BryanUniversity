@@ -51,6 +51,7 @@ const showToDos = (todos) => {
             .then(res => {
                 let characters = res.data.results
                 let characterUrl = characters[Math.floor(Math.random() * characters.length)].image
+                
 
                 let newtodo = document.createElement("div")
                 newtodo.classList.add("todo")
@@ -64,10 +65,15 @@ const showToDos = (todos) => {
                 newToDoDescription.textContent = e.description
                 newtodo.appendChild(newToDoDescription)
 
-                let newToDoImage = document.createElement('img')
+     
+                if(document.getElementById('addPic').checked == true){
+                 let newToDoImage = document.createElement('img')
                 newToDoImage.className = "divImage"
                 newToDoImage.src = characterUrl
                 newtodo.appendChild(newToDoImage)
+                
+            }
+                
 
                 let deleteButton = document.createElement("button")
                 deleteButton.textContent = "Delete"
